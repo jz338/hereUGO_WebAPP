@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require bootstrap-sprockets
+$(document).ready(function(){
+	var i=1;
+	$("#add_row").click(function(){
+		$('#addr'+i).html("<td><input name='name"+i+"' type='text' placeholder='Name' class='form-control input-md'  /> </td>");
+
+		$('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+      i++; 
+  });
+
+});
